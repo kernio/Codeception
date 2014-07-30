@@ -121,7 +121,7 @@ class Redis
         return $response;
     }
 
-    private function cmd($command)
+    public function cmd($command)
     {
         $this->debug('Command: ' . (is_array($command) ? join(', ', $command) : $command));
         $this->connect();
